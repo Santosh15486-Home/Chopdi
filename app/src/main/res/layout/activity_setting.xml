@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dip"
+    tools:context="com.ssl.san.chopdi.SettingActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="Old Pin :"
+        android:textSize="15sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:hint=""
+        android:textSize="20sp"
+        android:id="@+id/old_pin"
+        android:inputType="numberPassword"
+        android:digits="1234567890"
+        android:maxLength="6"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="New Pin :"
+        android:textSize="15sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:hint=""
+        android:textSize="20sp"
+        android:id="@+id/new_pin1"
+        android:inputType="numberPassword"
+        android:digits="1234567890"
+        android:maxLength="6"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="Confirm New Pin :"
+        android:textSize="15sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:hint=""
+        android:textSize="20sp"
+        android:id="@+id/new_pin2"
+        android:inputType="numberPassword"
+        android:digits="1234567890"
+        android:maxLength="6"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="Save"
+        android:onClick="saveSettings"/>
+
+</LinearLayout>

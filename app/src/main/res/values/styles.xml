@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+       <item name="android:editTextStyle">@style/MyEditText</item>
+    </style>
+    <style name="MyEditText" parent="AppTheme">
+        <item name="android:background">@drawable/rect</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:editable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+</resources>

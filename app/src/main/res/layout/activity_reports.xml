@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingTop="5dip"
+    tools:context="com.ssl.san.chopdi.ReportsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_controller">
+        <Button
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/down"
+            android:layout_marginTop="5dip"
+            android:onClick="showBills"
+            android:id="@+id/report_bill"/>
+        <Button
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/up"
+            android:layout_marginTop="5dip"
+            android:onClick="showExpenses"
+            android:visibility="gone"
+            android:id="@+id/report_expense"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:weightSum="3"
+            android:layout_marginLeft="50dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/rect"
+                android:visibility="invisible">
+
+                <Spinner
+                    android:id="@+id/all_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="2dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/rect"
+                android:visibility="invisible">
+
+                <Spinner
+                    android:id="@+id/all_months"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/rect">
+
+                <Spinner
+                    android:id="@+id/all_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignBottom="@+id/date_controller"
+        android:background="#808080" />
+
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#b7b7b7" />
+
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="40dip"
+            android:layout_height="44dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/circle"
+            android:onClick="showPrev"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="40dip"
+            android:layout_height="45dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/circle"
+            android:onClick="showNext"
+            android:text="+" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dip"
+            android:layout_marginRight="45dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/all_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/all_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/all_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/all_remain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/all_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls"
+        android:layout_below="@+id/date_controller">
+
+        <LinearLayout
+            android:id="@+id/records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

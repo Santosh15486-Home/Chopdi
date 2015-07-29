@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dip"
+    tools:context="com.ssl.san.chopdi.ExpensesActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:layout_margin="5dip"
+        android:gravity="center_vertical">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:id="@+id/expens_type"
+            android:entries="@array/expense_type"></Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:layout_margin="5dip"
+        android:gravity="center_vertical">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:id="@+id/expens_sub_type"></Spinner>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:layout_margin="5dip"
+        android:id="@+id/desc"
+        android:hint="Description"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:layout_margin="5dip"
+        android:id="@+id/amount"
+        android:hint="Amount"
+        android:inputType="number"
+        android:digits="1234567890."/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_margin="5dip"
+        android:text="Save"
+        android:onClick="saveExpense"/>
+
+</LinearLayout>
