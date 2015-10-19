@@ -69,6 +69,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="30 Aug 2015"
+                    android:textSize="12sp"
+                    android:textColor="@color/bill_text_color1"
+                    android:id="@+id/date"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Bill No : 1"
                     android:textSize="13sp"
                     android:textColor="@color/bill_text_color"
@@ -103,18 +110,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="30 Aug 2015"
-                    android:textSize="12sp"
-                    android:gravity="right"
-                    android:textColor="@color/bill_text_color1"
-                    android:id="@+id/date"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="G.K. Plastic"
+                    android:text="HARIOM  FLEXIPACK INDUSTRIES, KOLHAPUR"
                     android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"
