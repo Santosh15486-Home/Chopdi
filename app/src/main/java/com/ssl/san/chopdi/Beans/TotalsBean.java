@@ -10,6 +10,15 @@ public class TotalsBean {
     Double paid;
     Double chequeAmt;
     Double expense;
+    Double collection;
+
+    public Double getCollection() {
+        return collection;
+    }
+
+    public void setCollection(Double collection) {
+        this.collection = collection;
+    }
 
     public Double getExpense() {
         return expense;

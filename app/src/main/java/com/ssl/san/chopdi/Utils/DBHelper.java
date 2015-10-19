@@ -146,7 +146,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return customers;
     }
 
-    public TotalsBean getTotals(String year,String month,String day, int page){
+    public TotalsBean getTotals(String year,String month,String day){
         TotalsBean totals = new TotalsBean();
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "select sum(total),sum(paid),sum(discount),sum(remain),sum(cheque_amt) from bills where 1=1";
@@ -172,7 +172,7 @@ public class DBHelper extends SQLiteOpenHelper {
             res.moveToNext();
         }
 
-        query = "select sum(amount) from expense where 1=1";
+        query = "select sum(amount) from expense where expense !='"+Finals.COLLECTION+"' ";
         if(!year.contains("All")){
             query = query + " and year = "+year;
             if(!month.contains("All")){
@@ -190,6 +190,27 @@ public class DBHelper extends SQLiteOpenHelper {
             totals.setExpense(res1.getDouble(0));
             //Log.e("Totals Query",res1.getDouble(0)+"");
             res1.moveToNext();
+        }
+
+
+        query = "select sum(amount) from expense where expense ='"+Finals.COLLECTION+"' ";
+        if(!year.contains("All")){
+            query = query + " and year = "+year;
+            if(!month.contains("All")){
+                query = query + " and month = "+LoginActivity.monthsList.indexOf(month);
+            }
+            if(!day.contains("All")){
+                query = query + " and day = "+day;
+            }
+        }
+        //Log.e("Totals Query",query);
+        Cursor res2 = db.rawQuery(query, null);
+        res2.moveToFirst();
+        //total paid discount remain cheque_amt
+        while (res2.isAfterLast() == false) {
+            totals.setCollection(res2.getDouble(0));
+            //Log.e("Totals Query",res1.getDouble(0)+"");
+            res2.moveToNext();
         }
 
         return totals;
@@ -366,6 +387,17 @@ public class DBHelper extends SQLiteOpenHelper {
         return months;
     }
 
+    public void deleteRecord(String id, int table){
+        SQLiteDatabase db = this.getReadableDatabase();
+        if(table==0) {
+            String query = "delete from bills where id = " + id;
+            db.execSQL(query);
+        } else {
+            String query = "delete from expense where id = " + id;
+            db.execSQL(query);
+        }
+    }
+
     public ArrayList<String> getDays(String year, String month,String reportType) {
         ArrayList<String> days = new ArrayList<>();
         days.add("All Days");
@@ -398,6 +430,14 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("paid", paid+amount);
         contentValues.put("remain", remain-amount);
+        db.update("bills", contentValues, "id = ? ", new String[]{Integer.toString(id)});
+        return true;
+    }
+
+    public boolean setOther(String other, int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("cheque_bank", other);
         db.update("bills", contentValues, "id = ? ", new String[]{Integer.toString(id)});
         return true;
     }

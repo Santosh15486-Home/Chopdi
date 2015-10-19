@@ -13,4 +13,5 @@ public class Finals {
     public static final String SMS_SENDER = "9421996243";
     public static final String ACTIVE = "active";
     public static final int RECORD_LIMIT = 10;
+    public static final String COLLECTION = "Collection";
 }

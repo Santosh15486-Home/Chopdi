@@ -9,6 +9,7 @@
     <string name="action_new_cust">New Customer</string>
     <string name="action_logout">Log Out</string>
     <string name="action_expenses">Expenses</string>
+    <string name="action_collection">Collection</string>
     <string-array name="expense_type">
         <item>Transport</item>
         <item>Bills</item>
@@ -20,4 +21,5 @@
     <string name="title_activity_setting">Setting</string>
     <string name="title_activity_single_bill">SingleBillActivity</string>
     <string name="title_activity_expenses">Expenses</string>
+    <string name="title_activity_collection">Collection</string>
 </resources>

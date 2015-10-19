@@ -9,16 +9,20 @@
         android:title="@string/action_reports"
         android:orderInCategory="100"
         app:showAsAction="never" />
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
     <item android:id="@+id/action_expenses"
         android:title="@string/action_expenses"
         android:orderInCategory="100"
         app:showAsAction="never" />
+    <item android:id="@+id/action_collection"
+        android:title="@string/action_collection"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
     <item android:id="@+id/action_logout"
         android:title="@string/action_logout"
         android:orderInCategory="100"
         app:showAsAction="always"/>
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 </menu>

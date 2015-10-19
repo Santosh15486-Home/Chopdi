@@ -70,28 +70,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Bill No : 1"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@color/bill_text_color"
                     android:id="@+id/bill_no"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Santosh Phatangare"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@color/bill_text_color"
                     android:id="@+id/cust_name"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sarole Pathar"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@color/bill_text_color"
                     android:id="@+id/cust_addr"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="9421996243"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@color/bill_text_color1"
                     android:id="@+id/cust_mob"
                     android:clickable="true"
@@ -107,7 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="30 Aug 2015"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"
                     android:id="@+id/date"/>
@@ -115,7 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="G.K. Plastic"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"
                     android:textStyle="bold"/>
@@ -123,21 +123,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Authorised Dealer"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ajit Gaikwad"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="+91 99603 81218"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:gravity="right"
                     android:textColor="@color/bill_text_color1"/>
             </LinearLayout>
@@ -157,7 +157,7 @@
             android:layout_above="@+id/relativeLayout"
             android:layout_below="@+id/view"
             android:orientation="horizontal"
-            android:paddingTop="20dip">
+            android:paddingTop="2dip">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,6 +179,32 @@
                     android:text="350 M"
                     android:textColor="@color/bill_text_color"
                     android:id="@+id/paper_size"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/bill_text_color"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/bill_text_color"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textColor="#ff070c"
+                    android:inputType="number"
+                    android:digits="1234567890."
+                    android:id="@+id/other"
+                    android:maxLength="10"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sq.Meter"
+                    android:textColor="@color/bill_text_color"
+                    android:paddingLeft="4dip"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -351,13 +377,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Bill Date :"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textColor="@color/bill_text_color"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Place"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textColor="@color/bill_text_color"/>
                 </LinearLayout>
                 <LinearLayout
@@ -369,14 +395,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10 Aug 2015"
-                        android:textSize="15sp"
+                        android:textSize="11sp"
                         android:textColor="@color/bill_text_color"
                         android:id="@+id/bill_date"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Sangamner"
-                        android:textSize="15sp"
+                        android:textSize="11sp"
                         android:textColor="@color/bill_text_color"/>
                 </LinearLayout>
                 <LinearLayout
@@ -388,7 +414,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Total"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:gravity="right"
                         android:textColor="@color/bill_text_color" />
 
@@ -402,7 +428,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="6000"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:gravity="right"
                         android:textColor="@color/bill_text_color"
                         android:id="@+id/bill_total2" />
@@ -412,8 +438,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tip : All measurements are in Ft or SqFt."
-                android:textSize="15sp"
+                android:text="Tip : All measurements are in Meter or Sq.Meter"
+                android:textSize="11sp"
                 android:textColor="@color/bill_text_color"
                 android:layout_below="@+id/summery" />
         </RelativeLayout>

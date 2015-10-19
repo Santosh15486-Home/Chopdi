@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/chopdi"
@@ -62,6 +63,10 @@
             android:name=".ExpensesActivity"
             android:label="@string/title_activity_expenses"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CollectionActivity"
+            android:label="@string/title_activity_collection" >
         </activity>
     </application>
 

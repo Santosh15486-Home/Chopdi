@@ -21,11 +21,20 @@
             android:text="26 Jul 2015"
             android:layout_alignParentRight="true"
             android:id="@+id/r_date"
-            android:textSize="17sp"/>
+            android:textSize="17sp"
+            android:layout_marginRight="35dip"/>
+        <Button
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete"
+            android:layout_marginTop="-3dip"
+            android:id="@+id/del_rec"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_1">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +63,8 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_2">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

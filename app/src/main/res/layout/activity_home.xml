@@ -16,7 +16,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="Customer Name :"
-               android:textSize="20sp"
+               android:textSize="15sp"
                android:padding="5dip"/>
            <RelativeLayout
                android:layout_width="match_parent"
@@ -24,15 +24,15 @@
                android:padding="5dip">
                <AutoCompleteTextView
                    android:layout_width="match_parent"
-                   android:layout_height="40dip"
-                   android:layout_marginRight="50dip"
+                   android:layout_height="35dip"
+                   android:layout_marginRight="40dip"
                    android:background="@drawable/rect"
                    android:hint="Customer Name"
-                   android:padding="10dip"
+                   android:padding="5dip"
                    android:id="@+id/cust_auto"/>
                <Button
-                   android:layout_width="40dip"
-                   android:layout_height="40dip"
+                   android:layout_width="35dip"
+                   android:layout_height="35dip"
                    android:layout_alignParentRight="true"
                    android:layout_alignParentTop="true"
                    android:layout_margin="0dip"
@@ -68,40 +68,52 @@
                    android:weightSum="4">
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Height 1"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/height1"/>
+                       android:id="@+id/height1"
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Height 2"
-                      android:layout_weight="1"
+                       android:textSize="12sp"
+                       android:layout_weight="1"
                        android:layout_margin="3dip"
+                       android:paddingLeft="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/height2"/>
+                       android:id="@+id/height2"
+                       android:background="@drawable/rect"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Height 3"
                       android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/height3"/>
+                       android:id="@+id/height3"
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:paddingLeft="3dip"
+                       android:layout_height="30dip"
                        android:hint="Height"
+                       android:textSize="12sp"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:id="@+id/height"
                        android:inputType="number"
-                       android:digits="1234567890."/>
+                       android:digits="1234567890."
+                       android:background="@drawable/rect"/>
                </LinearLayout>
                <TextView
                    android:layout_width="match_parent"
@@ -115,40 +127,52 @@
                    android:weightSum="4">
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Width 1"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/width1"/>
+                       android:id="@+id/width1"
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                    <EditText
+                       android:textSize="12sp"
+                       android:paddingLeft="3dip"
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Width 2"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/width2"/>
+                       android:id="@+id/width2"
+                       android:background="@drawable/rect"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Width 3"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/width3"/>
+                       android:id="@+id/width3"
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:paddingLeft="3dip"
+                       android:layout_height="30dip"
                        android:hint="Width"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:id="@+id/width"
                        android:inputType="number"
-                       android:digits="1234567890."/>
+                       android:digits="1234567890."
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"/>
                </LinearLayout>
                <TextView
                    android:layout_width="match_parent"
@@ -164,27 +188,31 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_weight="1"
-                       android:layout_margin="3dip"
-                       android:background="@drawable/rect">
+                       android:layout_marginRight="3dip"
+                       android:background="@drawable/rect"
+                       android:layout_marginTop="7dip">
                    <Spinner
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:id="@+id/paper_type"/>
                    </LinearLayout>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Rate"
-                      android:layout_weight="1"
+                       android:textSize="12sp"
+                       android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/rate"/>
+                       android:id="@+id/rate"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                    <TextView
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:padding="10dip"
-                       android:text="0 Sq.Ft."
+                       android:text="0 Sq.M"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:id="@+id/paper_area"
@@ -234,13 +262,16 @@
                        android:enabled="false"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Cash Amount"
                         android:layout_weight="1"
+                       android:textSize="12sp"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/paid"/>
+                       android:id="@+id/paid"
+                       android:background="@drawable/rect"
+                       android:paddingLeft="3dip"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="match_parent"
@@ -258,24 +289,30 @@
                        android:id="@+id/cb_cheque"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:paddingLeft="3dip"
+                       android:layout_height="30dip"
                        android:hint="Amount"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
+                       android:textSize="12sp"
                        android:inputType="number"
                        android:digits="1234567890."
                        android:id="@+id/cheque_amt"
-                       android:visibility="invisible"/>
+                       android:visibility="invisible"
+                       android:background="@drawable/rect"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Number"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
                        android:id="@+id/cheque_no"
-                       android:visibility="invisible"/>
+                       android:paddingLeft="3dip"
+                       android:textSize="12sp"
+                       android:visibility="invisible"
+                       android:background="@drawable/rect"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="match_parent"
@@ -284,22 +321,28 @@
                    android:weightSum="3">
                   <EditText
                       android:layout_width="match_parent"
-                      android:layout_height="40dip"
+                      android:layout_height="30dip"
                       android:layout_weight="2"
                       android:layout_margin="3dip"
                       android:hint="Date"
                       android:id="@+id/cheque_date"
-                      android:visibility="gone"/>
+                      android:visibility="gone"
+                      android:textSize="12sp"
+                      android:background="@drawable/rect"
+                      android:paddingLeft="3dip"/>
 
 
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Bank Name"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:id="@+id/cheque_bank"
-                       android:visibility="gone"/>
+                       android:visibility="gone"
+                       android:paddingLeft="3dip"
+                       android:textSize="12sp"
+                       android:background="@drawable/rect"/>
                </LinearLayout>
                <LinearLayout
                    android:layout_width="match_parent"
@@ -308,26 +351,25 @@
                    android:weightSum="3">
                    <TextView
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:text="Discount :"
-                       android:padding="10dip"
                        android:layout_weight="1"
                        android:layout_margin="3dip"/>
                    <EditText
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
+                       android:layout_height="30dip"
                        android:hint="Discount"
                        android:background="@drawable/rect"
-                       android:padding="10dip"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
                        android:digits="1234567890."
-                       android:id="@+id/disc"/>
+                       android:textSize="12sp"
+                       android:id="@+id/disc"
+                       android:paddingLeft="3dip"/>
                    <TextView
                        android:layout_width="match_parent"
-                       android:layout_height="40dip"
-                       android:padding="10dip"
+                       android:layout_height="30dip"
                        android:layout_weight="1"
                        android:layout_margin="3dip"/>
                </LinearLayout>
@@ -340,7 +382,6 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:text="Remaining :"
-                       android:padding="10dip"
                        android:layout_weight="1"
                        android:layout_margin="3dip"
                        android:inputType="number"
@@ -348,7 +389,6 @@
                    <TextView
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:padding="10dip"
                        android:text="0"
                        android:layout_weight="1"
                        android:layout_margin="3dip"

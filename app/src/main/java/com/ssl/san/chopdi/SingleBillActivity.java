@@ -31,7 +31,7 @@ public class SingleBillActivity extends AppCompatActivity {
     TextView bill_no;
     BillBean bill;
     String index;
-    EditText recoverAmt;
+    EditText recoverAmt,other;
     View recovery;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class SingleBillActivity extends AppCompatActivity {
         bill_no = (TextView) findViewById(R.id.bill_no);
         index = getIntent().getStringExtra("bill_no");
         recoverAmt = (EditText)findViewById(R.id.recover_amt);
+        other = (EditText)findViewById(R.id.other);
         recovery = findViewById(R.id.recovery);
     }
 
@@ -84,6 +85,11 @@ public class SingleBillActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.bill_disc)).setText("- " + bill.getDiscount());
         ((TextView) findViewById(R.id.bill_remain)).setText("" + bill.getRemain());
         ((TextView) findViewById(R.id.bill_date)).setText(date + " " + LoginActivity.monthsList.get(month) + " " + year);
+        try{
+            other.setText(bill.getChequeBank().split("#")[1]);
+        }catch (Exception e){
+            other.setText("0.0");
+        }
         if(bill.getRemain()<=0){
             recovery.setVisibility(View.INVISIBLE);
         }
@@ -125,6 +131,22 @@ public class SingleBillActivity extends AppCompatActivity {
     }
 
     public void saveBill(View v) {
+        String otherData = "";
+        String chequeBank="";
+        try{
+            chequeBank = bill.getChequeBank().split("#")[0];
+            otherData = bill.getChequeBank().split("#")[1];
+        }catch (Exception e){
+            chequeBank = bill.getChequeBank();
+            otherData = other.getText().toString();
+        }
+        otherData = other.getText().toString();
+        DBHelper db = new DBHelper(getApplicationContext());
+        db.setOther(chequeBank+"#"+otherData, bill.getId());
+        Toast.makeText(getApplicationContext(),"Recovery Saved",Toast.LENGTH_LONG).show();
+        db.close();
+
+
         View view = findViewById(R.id.bill);
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
@@ -146,8 +168,8 @@ public class SingleBillActivity extends AppCompatActivity {
             out.flush();
             out.close();
             Toast.makeText(getApplicationContext(),"Bill Saved In Bill Folder",Toast.LENGTH_LONG).show();
-            v.setEnabled(false);
-            v.setAlpha(0.5f);
+            //v.setEnabled(false);
+            //v.setAlpha(0.5f);
             Uri uri = Uri.fromFile(file);
             Intent scanFileIntent = new Intent(
                     Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri);

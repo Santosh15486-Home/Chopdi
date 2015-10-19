@@ -18,7 +18,9 @@
         android:inputType="numberPassword"
         android:digits="1234567890"
         android:gravity="center"
-        android:textSize="20sp">
+        android:textSize="20sp"
+        android:background="@drawable/rect"
+        android:padding="3dip">
         <requestFocus/>
         </EditText>
     <Button

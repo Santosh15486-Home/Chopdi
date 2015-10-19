@@ -56,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         paid = (EditText) findViewById(R.id.paid);
         discount = (EditText) findViewById(R.id.disc);
 
+
         height1 = (EditText) findViewById(R.id.height1);
         width1 = (EditText) findViewById(R.id.width1);
         height2 = (EditText) findViewById(R.id.height2);
@@ -161,7 +162,7 @@ public class HomeActivity extends AppCompatActivity {
         BigDecimal bDisc = new BigDecimal(discount.getText().toString().equals("") ? "0" : discount.getText().toString());
         BigDecimal bCheque = new BigDecimal(chequeAmt.getText().toString().equals("") ? "0" : chequeAmt.getText().toString());
 
-        paperArea.setText(round(bHeight.multiply(bWidth)).toString() + " Sq.Ft.");
+        paperArea.setText(round(bHeight.multiply(bWidth)).toString() + " Sq.M");
         BigDecimal bTotal = (round(bHeight.multiply(bWidth.multiply(bRate))));
         total.setText(bTotal.toString());
         BigDecimal bRemain = bTotal.subtract(bPaid);
@@ -285,6 +286,11 @@ public class HomeActivity extends AppCompatActivity {
         }
         if (id == R.id.action_expenses) {
             Intent intent = new Intent(getApplicationContext(), ExpensesActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.action_collection) {
+            Intent intent = new Intent(getApplicationContext(), CollectionActivity.class);
             startActivity(intent);
             return true;
         }

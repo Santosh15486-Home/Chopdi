@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ssl.san.chopdi.CustomerActivity"
+    android:padding="5dip"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:padding="5dip"
+        android:layout_margin="5dip"
+        android:hint="Name"
+        android:id="@+id/c_name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:padding="5dip"
+        android:layout_margin="5dip"
+        android:hint="Description"
+        android:id="@+id/c_desc"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/rect"
+        android:padding="5dip"
+        android:layout_margin="5dip"
+        android:hint="Amount"
+        android:inputType="number"
+        android:digits="1234567890."
+        android:maxLength="10"
+        android:id="@+id/c_amount"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button"
+        android:onClick="saveCollection"
+        android:layout_margin="5dip"/>
+</LinearLayout>
